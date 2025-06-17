@@ -1,0 +1,18 @@
+
+<h2>Add Payment</h2>
+<form (ngSubmit)="addPayment()" style="max-width: 400px; margin: auto;">
+
+  <label for="amount">Amount:</label><br />
+  <input [(ngModel)]="newPayment.amount" name="amount" id="amount" type="number" placeholder="Amount" required /><br /><br />
+
+  <label for="paymentDate">Payment Date:</label><br />
+  <input [(ngModel)]="newPayment.paymentDate" name="paymentDate" id="paymentDate" type="date" required /><br /><br />
+
+  <label for="paymentMethod">Payment Method:</label><br />
+  <input [(ngModel)]="newPayment.paymentMethod" name="paymentMethod" id="paymentMethod" type="text" placeholder="e.g., Credit Card" required /><br /><br />
+
+  <label for="paymentStatus">Payment Status:</label><br />
+  <input [(ngModel)]="newPayment.paymentStatus" name="paymentStatus" id="paymentStatus" type="text" placeholder="e.g., Completed" required /><br /><br />
+
+  <button type="submit">Add Payment</button>
+</form>

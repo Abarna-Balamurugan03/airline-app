@@ -1,0 +1,18 @@
+<div align="centre">
+    <h2>Add Customer</h2>
+    <form (ngSubmit)="addCustomer()">
+        <label for="firstName">First Name :</label>
+        <input type="text" [(ngModel)]="newCustomer.firstName" name="firstName" id="firstName" required><br><br>
+        <label for="lastName">Last Name :</label>
+        <input type="text" [(ngModel)]="newCustomer.lastName" id="lastName" name="lastName" required><br><br>
+        <label for="email">Email :</label>
+        <input type="text" [(ngModel)]="newCustomer.email" id="email" name="email" required><br><br>
+        <label for="phone">Phone :</label>
+        <input type="text" [(ngModel)]="newCustomer.phone" id="phone" name="phone" required><br><br>
+        <label for="dateOfBirth">Date Of Birth :</label>
+        <input type="text" [(ngModel)]="newCustomer.dateOfBirth" id="dateOfBirth" name="dateOfBirth" required><br><br>
+        <label for="loyaltyPoints">Loyalty Points :</label>
+        <input type="text" [(ngModel)]="newCustomer.loyaltyPoints" id="loyaltyPoints" name="loyaltyPoints" required>
+        <input type="submit" value="submit">
+    </form>
+</div>

@@ -1,0 +1,34 @@
+<div>
+    <h3>Search Notification Template :</h3>
+    <input type="number" [(ngModel)]="templateId" name="templateId">
+    <button (click)="viewTemplate()">Search Template</button>
+    
+</div><br>
+<div *ngIf="template">
+    <h3>Notification Template Info :</h3>
+    <ul>
+        <li><strong>Template Id :</strong>{{template.templateId}}</li><br>
+        <li><strong>Template Name :</strong>{{template.templateName}}</li><br>
+        <li><strong>Content :</strong>{{template.content}}</li>
+    </ul>
+</div><br>
+
+<div>
+    <h3>Notification Template List :</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Template Id</th>
+                <th>Template Name</th>
+                <th>Content</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let template of templates"> 
+                <td>{{template.templateId}}</td>
+                <td>{{template.templateName}}</td>
+                <td>{{template.content}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,25 @@
+
+<h2>Add Passenger</h2>
+<form (ngSubmit)="addPassenger()" style="max-width: 400px; margin: auto;">
+
+  <label for="name">Name:</label><br />
+  <input [(ngModel)]="newPassenger.name" name="name" id="name" type="text" placeholder="Full Name" required /><br /><br />
+
+  <label for="gender">Gender:</label><br />
+  <input [(ngModel)]="newPassenger.gender" name="gender" id="gender" type="text" placeholder="Gender" required /><br /><br />
+
+  <label for="age">Age:</label><br />
+  <input [(ngModel)]="newPassenger.age" name="age" id="age" type="number" placeholder="Age" required /><br /><br />
+
+  <label for="passportNumber">Passport Number:</label><br />
+  <input [(ngModel)]="newPassenger.passportNumber" name="passportNumber" id="passportNumber" type="text" placeholder="Passport No." required /><br /><br />
+
+  <label for="nationality">Nationality:</label><br />
+  <input [(ngModel)]="newPassenger.nationality" name="nationality" id="nationality" type="text" placeholder="Nationality" required /><br /><br />
+
+  <label for="bookingId">Booking Id:</label>
+  <input [(ngModel)]="newPassenger.booking.bookingId" type="number" id="bookingId" name="bookingId" placeholder="Booking Id" required/><br><br>
+
+
+  <button type="submit">Add Passenger</button>
+</form>

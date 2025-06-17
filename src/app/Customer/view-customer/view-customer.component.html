@@ -1,0 +1,44 @@
+<div>
+    <h3>Search Customer :</h3>
+    <input type="number" [(ngModel)]="customerId" name="customerId" id="customerId">
+    <button (click)="viewCustomer()">View Customer </button>
+</div>
+<div *ngIf="customer">
+    <h2>Customer Info:</h2>
+    <ul>
+        <li><strong>Customer Id : </strong>{{customer.customerId}}</li><br>
+        <li><strong>First Name : </strong>{{customer.firstName}}</li><br>
+        <li><strong>Last Name : </strong>{{customer.lastName}}</li><br>
+        <li><strong>Email : </strong>{{customer.email}}</li><br>
+        <li><strong>Phone : </strong>{{customer.phone}}</li><br>
+        <li><strong>Date Of Birth : </strong>{{customer.dateOfBirth}}</li><br>
+        <li><strong>Loyalty Points : </strong>{{customer.loyaltyPoints}}</li><br>
+    </ul>
+</div>
+<div>
+    <h3>All Customers :</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Customer Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Date Of Birth</th>
+                <th>Loyalty Points</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let customer of customers">
+                <td>{{customer.customerId}}</td>
+                <td>{{customer.firstName}}</td>
+                <td>{{customer.lastName}}</td>
+                <td>{{customer.email}}</td>
+                <td>{{customer.phone}}</td>
+                <td>{{customer.dateOfBirth}}</td>
+                <td>{{customer.loyaltyPoints}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

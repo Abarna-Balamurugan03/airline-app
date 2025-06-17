@@ -1,0 +1,43 @@
+<div>
+    <h2>Search Notification :</h2>
+    <input type="number" [(ngModel)]="notificationId" name="notificationId" id="notificationId">
+    <button (click)="viewNotification()">Search Notification</button>
+</div>
+<div *ngIf="notification">
+    <h3>Notification Info :</h3>
+    <ul>
+        <li><strong>Notification Id :</strong>{{notification.notificationId}}</li>
+        <li><strong>Customer Id :</strong>{{notification.customerId}}</li><br>
+        <li><strong>Message :</strong>{{notification.message}}</li><br>
+        <li><strong>Type :</strong>{{notification.type}}</li><br>
+        <li><strong>Sent Status :</strong>{{notification.sentStatus}}</li><br>
+        <li><strong>Sent Date :</strong>{{notification.sentDate}}</li><br>
+    </ul>
+</div>
+<div>
+    <h3>Notification List :</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Notification Id</th>
+                <th>Customer Id</th>
+                <th>Message</th>
+                <th>Type</th>
+                <th>Sent Status</th>
+                <th>Sent Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let notification of notifications">
+                <td>{{notification.notificationId}}</td>
+                <td>{{notification.customerId}}</td>
+                <td>{{notification.message}}</td>
+                <td>{{notification.type}}</td>
+                <td>{{notification.sentStatus}}</td>
+                <td>{{notification.sentDate}}</td>
+            </tr>
+        </tbody>
+        
+
+    </table>
+</div>

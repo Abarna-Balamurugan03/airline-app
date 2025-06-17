@@ -1,0 +1,12 @@
+<div align="centre">
+    <h2>Add Notification Template :</h2>
+    <form (ngSubmit)="addTemplate()">
+        <label for="templateId">Template Id :</label>
+        <input type="number" [(ngModel)]="newTemplate.templateId" name="templateId" id="templateId" required><br><br>
+        <label for="templateName">Template Name :</label>
+        <input type="text" [(ngModel)]="newTemplate.templateName" name="templateName" id="templateName" required><br><br>
+        <label for="content">Content :</label>
+        <input type="text" [(ngModel)]="newTemplate.content" id="content" name="content" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>

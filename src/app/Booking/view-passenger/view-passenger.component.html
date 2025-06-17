@@ -1,0 +1,50 @@
+<h1>View Passenger</h1>
+
+
+<div>
+  <input type="number" [(ngModel)]="passengerId" placeholder="Enter Passenger ID" />
+  <button (click)="viewPassenger()">View Passenger</button>
+</div>
+
+<div *ngIf="passenger">
+  <h3>Passenger Info:</h3>
+  <ul>
+    <li><strong>Passenger ID:</strong> {{ passenger.passengerId }}</li>
+    <li><strong>Name:</strong> {{ passenger.name }}</li>
+    <li><strong>Gender:</strong> {{ passenger.gender }}</li>
+    <li><strong>Age:</strong> {{ passenger.age }}</li>
+    <li><strong>Passport Number:</strong> {{ passenger.passportNumber }}</li>
+    <li><strong>Nationality:</strong> {{ passenger.nationality }}</li>
+    <li><strong>Booking ID:</strong> {{ passenger.booking.bookingId }}</li>
+  </ul>
+</div>
+
+<!-- All Passengers Table -->
+<div class="container mt-3">
+  <h3>All Passengers</h3>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Passenger ID</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Passport Number</th>
+        <th>Nationality</th>
+        <th>Booking ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let passenger of passengers">
+        <td>{{ passenger.passengerId }}</td>
+        <td>{{ passenger.name }}</td>
+        <td>{{ passenger.gender }}</td>
+        <td>{{ passenger.age }}</td>
+        <td>{{ passenger.passportNumber }}</td>
+        <td>{{ passenger.nationality }}</td>
+        <td>{{ passenger.booking?.bookingId }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

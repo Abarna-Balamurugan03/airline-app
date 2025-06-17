@@ -1,0 +1,43 @@
+<div >
+    <h3>Search Frequent Flyer :</h3>
+    <input type="number" [(ngModel)]="flyerId" name="flyerId" id="flyerId">
+    <button (click)="viewFlyer()">Search</button>  
+</div>
+<div *ngIf="flyer">
+    <h3>Frequent Flyer Info :</h3>
+    <ul>
+        <li><strong>Flyer Id :</strong>{{flyer.flyerId}}</li><br>
+        <li><strong>Membership Number :</strong>{{flyer.membershipNumber}}</li><br>
+        <li><strong>Status :</strong>{{flyer.status}}</li><br>
+        <li><strong>Points Earned :</strong>{{flyer.pointsEarned}}</li><br>
+        <li><strong>Tier Expiry Date :</strong>{{flyer.tierExpiryDate}}</li><br>
+        <li><strong>Customer Id :</strong>{{flyer.customer.customerId}}</li><br>
+    </ul>
+</div>
+
+<div>
+    <h3>All Frequent Flyers</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Flyer Id</th>
+                <th>Membership Number</th>
+                <th>Status</th>
+                <th>Points Earned</th>
+                <th>Tier Expiry Date</th>
+                <th>Customer Id</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let flyer of flyers">
+                <td>{{flyer.flyerId}}</td>
+                <td>{{flyer.membershipNumber}}</td>
+                <td>{{flyer.status}}</td>
+                <td>{{flyer.pointsEarned}}</td>
+                <td>{{flyer.tierExpiryDate}}</td>
+                <td>{{flyer.customer.customerId}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

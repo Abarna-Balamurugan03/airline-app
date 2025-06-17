@@ -1,0 +1,16 @@
+<div align="centre">
+    <h2>Add Frequent Flyer</h2>
+    <form (ngSubmit)="addFlyer()">
+        <label for="membershipNumber">Membership Number :</label>
+        <input type="text" [(ngModel)]="newFlyer.membershipNumber" name="membershipNumber" id="membershipNumber" required><br><br>
+        <label for="status">Status :</label>
+        <input type="text" [(ngModel)]="newFlyer.status" name="status" id="status" required><br><br>
+        <label for="pointsEarned">Points Earned :</label>
+        <input type="number" [(ngModel)]="newFlyer.pointsEarned" name="pointsEarned" id="pointsEarned" required><br><br>
+        <label for="tierExpiryDate">Tier Expiry Date :</label>
+        <input type="date" [(ngModel)]="newFlyer.tierExpiryDate" name="tierExpiryDate" id="tierExpiryDate" required><br><br>
+        <label for="customerID">Customer ID :</label>
+        <input type="number" [(ngModel)]="newFlyer.customer.customerId" name="customerID" id="customerID" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>

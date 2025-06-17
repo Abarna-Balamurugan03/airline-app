@@ -1,0 +1,46 @@
+
+
+<!-- Search by Airport ID -->
+<div >
+  <h1>View Airport</h1>
+  <input type="number" [(ngModel)]="airportId" placeholder="Enter Airport ID" />
+  <button (click)="viewAirport()">View Airport</button>
+</div>
+
+<!-- Display Single Airport Info -->
+<div *ngIf="airport" >
+  <h3>Airport Info:</h3>
+  <ul >
+    <li><strong>Airport ID:</strong> {{ airport.airportId }}</li>
+    <li><strong>Code:</strong> {{ airport.code }}</li>
+    <li><strong>Name:</strong> {{ airport.name }}</li>
+    <li><strong>Country:</strong> {{ airport.country }}</li>
+    <li><strong>City:</strong> {{ airport.city }}</li>
+  </ul>
+</div>
+
+<!-- All Airports Table -->
+<div >
+  <h3>All Airports</h3>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Airport ID</th>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Country</th>
+        <th>City</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let airport of airports">
+        <td>{{ airport.airportId }}</td>
+        <td>{{ airport.code }}</td>
+        <td>{{ airport.name }}</td>
+        <td>{{ airport.country }}</td>
+        <td>{{ airport.city }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

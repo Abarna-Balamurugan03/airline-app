@@ -1,0 +1,19 @@
+<div align="centre">
+    <h2>Add Notification :</h2>
+    <form (ngSubmit)="addNotification()">
+        <label for="message">Notification Id :</label>
+        <input type="number" [(ngModel)]="newNotification.notificationId" id="notificationId" name="notificationId" required><br><br>
+        <label for="message">Message :</label>
+        <input type="text" [(ngModel)]="newNotification.message" id="message" name="message" required><br><br>
+        <label for="type">Type :</label>
+        <input type="text" [(ngModel)]="newNotification.type" id="type" name="type" required><br><br>
+        <label for="sentStatus">Sent Status :</label>
+        <input type="text" [(ngModel)]="newNotification.sentStatus" id="sentStatus" name="sentStatus" required><br><br>
+        <label for="type">Type :</label>
+        <input type="date" [(ngModel)]="newNotification.sentDate" id="sentDate" name="sentDate" required><br><br>
+        <label for="customerId">customer Id :</label>
+        <input type="number" [(ngModel)]="newNotification.customerId" id="customerId" name="customerId" required><br><br>
+        <input type="submit" value="Submit">
+
+    </form>
+</div>

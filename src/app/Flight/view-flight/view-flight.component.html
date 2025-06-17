@@ -1,0 +1,56 @@
+<h1>View Flight</h1>
+
+<!-- Search by Flight ID -->
+<div align="center">
+  <input type="number" [(ngModel)]="flightId" placeholder="Enter Flight ID" />
+  <button (click)="viewFlight()">View Flight</button>
+</div>
+
+<!-- Display Single Flight Info -->
+<div *ngIf="flight" align="center">
+  <h3>Flight Info:</h3>
+  <ul>
+    <li><strong>Flight ID:</strong> {{ flight.flightId }}</li>
+    <li><strong>Flight Number:</strong> {{ flight.flightNumber }}</li>
+    <li><strong>Departure Time:</strong> {{ flight.departureTime }}</li>
+    <li><strong>Arrival Time:</strong> {{ flight.arrivalTime }}</li>
+    <li><strong>Seat Capacity:</strong> {{ flight.seatCapacity }}</li>
+    <li><strong>Available Seats:</strong> {{ flight.availableSeats }}</li>
+    <li><strong>Status:</strong> {{ flight.status }}</li>
+    <li><strong>Departure Airport ID:</strong> {{ flight.departureAirport?.airportId }}</li>
+    <li><strong>Arrival Airport ID:</strong> {{ flight.arrivalAirport?.airportId }}</li>
+  </ul>
+</div>
+
+<!-- All Flights Table -->
+<div align="center">
+  <h3>All Flights</h3>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Flight ID</th>
+        <th>Flight Number</th>
+        <th>Departure Time</th>
+        <th>Arrival Time</th>
+        <th>Seat Capacity</th>
+        <th>Available Seats</th>
+        <th>Status</th>
+        <th>Departure Airport ID</th>
+        <th>Arrival Airport ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let flight of flights">
+        <td>{{ flight.flightId }}</td>
+        <td>{{ flight.flightNumber }}</td>
+        <td>{{ flight.departureTime }}</td>
+        <td>{{ flight.arrivalTime }}</td>
+        <td>{{ flight.seatCapacity }}</td>
+        <td>{{ flight.availableSeats }}</td>
+        <td>{{ flight.status }}</td>
+        <td>{{ flight.departureAirport?.airportId }}</td>
+        <td>{{ flight.arrivalAirport?.airportId }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
